@@ -1,6 +1,7 @@
+---
 version: 2
 jobs:
- test:
+  test:
     docker:
       - image: circleci/ruby:latest
     steps:
@@ -8,7 +9,6 @@ jobs:
       - run: rubocop
 workflows:
   version: 2
- test:
+test:
   jobs:
-   - test
-  
+    - test
