@@ -1,5 +1,0 @@
-engines:
- rubocop:
-   enabled: true
-coverage:
- enabled: true
