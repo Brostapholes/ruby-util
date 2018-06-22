@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
 
+require 'fileutils'
+
 # Clear Chef cache
-Dir.chdir('/var/chef/cache') do
-  Dir.glob('**/*').each { |file| File.delete(file) }
+Dir['/var/chef/cache/*'].each do |x|
+  FileUtils.rm_rf(x, verbose: true)
 end
 
 # Remove they ruby-build file
-Dir.chdir('/usr/local/bin') do
-  Dir.glob('ruby-build').each { |file| File.delete(file) }
-end
+FileUtils.rm_f('/usr/local/bin/ruby-build', verbose: true)
 
 # Run chef-client
 system('chef-client')
