@@ -1,16 +1,17 @@
 version: 2
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/ruby:latest
     steps:
       - checkout
-      - run: gem update --system
-      - run: gem install rubocop --no-ri --no-rdoc
-      - run: rubocop
+      - run:
+          command: |
+            gem update --system
+            gem install rubocop
+            rubocop
 workflows:
   version: 2
-  test:
+  build:
     jobs:
-      - test
-  
+      - build
