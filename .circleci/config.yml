@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:latest
+    steps:
       - checkout
       - run:
           command: |
