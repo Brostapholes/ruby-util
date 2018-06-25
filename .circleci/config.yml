@@ -5,7 +5,7 @@ jobs:
       - image: circleci/ruby:latest
     steps:
       - run:
-        command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - checkout
       - run:
           command: |
