@@ -9,8 +9,6 @@ AllCops:
     - '.rubocop/**/*'
     - '*.gitignore'
     - '*.md'
-  Style/FrozenStringLiteralComment:
-    Enabled: false
   DefaultFormatter: progress
   DisplayCopNames: true
   StyleGuideBaseURL: https://github.com/rubocop-hq/ruby-style-guide
