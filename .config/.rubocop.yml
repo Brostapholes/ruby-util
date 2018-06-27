@@ -4,9 +4,9 @@ AllCops:
     - ruby
   Exclude:
     - '.circleci/**/*'
+    - '.config/**/*'
     - '.git/**/*'
     - '.idea/**/*'
-    - '.rubocop/**/*'
     - '*.gitignore'
     - '*.md'
   DefaultFormatter: progress
