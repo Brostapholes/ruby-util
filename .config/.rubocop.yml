@@ -12,9 +12,13 @@ AllCops:
   DefaultFormatter: progress
   DisplayCopNames: true
   StyleGuideBaseURL: https://github.com/rubocop-hq/ruby-style-guide
-  ExtraDetails: false
-  
+  ExtraDetails: true
   StyleGuideCopsOnly: false
   EnabledByDefault: false
   DisabledByDefault: false
+  UseCache: fales
   TargetRubyVersion: 2.5
+
+#################### Metrics ###############################
+Metrics/LineLength:
+  Max: 100
