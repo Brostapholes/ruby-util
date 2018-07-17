@@ -5,7 +5,7 @@
 require 'fileutils'
 
 # Clear Chef cache
-Dir['/var/chef/cache/*'].each do |x|
+Dir['/var/chef/cache/*', '/etc/yum.repos.d/*'].each do |x|
   FileUtils.rm_rf(x, verbose: true)
 end
 
