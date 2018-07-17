@@ -13,6 +13,7 @@ AllCops:
   DisplayCopNames: true
   StyleGuideBaseURL: https://github.com/rubocop-hq/ruby-style-guide
   ExtraDetails: false
+  
   StyleGuideCopsOnly: false
   EnabledByDefault: false
   DisabledByDefault: false
