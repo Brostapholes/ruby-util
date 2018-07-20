@@ -4,7 +4,6 @@
 
 require 'fileutils'
 
-
 # Clear Chef cache
 Dir['/var/chef/cache/*'].each do |x|
   FileUtils.rm_rf(x, verbose: true)
