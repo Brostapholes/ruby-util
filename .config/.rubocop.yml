@@ -16,7 +16,7 @@ AllCops:
   StyleGuideCopsOnly: false
   EnabledByDefault: false
   DisabledByDefault: false
-  UseCache: fales
+  UseCache: false
   TargetRubyVersion: 2.5
 
 #################### Metrics ###############################
