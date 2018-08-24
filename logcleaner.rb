@@ -28,6 +28,5 @@ end
 Dir.chdir('/var/log/sa') do
   safiles.each do |x|
     `gzip --best #{x}`
-    File.delete(x)
   end
 end
