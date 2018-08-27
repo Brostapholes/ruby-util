@@ -1,0 +1,15 @@
+---
+#safelist
+branches:
+  only:
+  - dev
+  - master
+
+before_install:
+  - sudo apt-get update -qq
+  - rvm install 2.5.0
+  - gem update --system
+
+install: gem install rubocop
+
+script: rubocop -c .rubocop.yml
