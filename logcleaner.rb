@@ -1,5 +1,7 @@
 # !/usr/bin/env ruby
 
+require 'zlib'
+
 dirs = []
 safiles = []
 
@@ -24,7 +26,11 @@ end
 
 # SA Files cleanup
 Dir.chdir('/var/log/sa') do
-  safiles.each do |x|
-    `gzip --best #{x}`
+  safiles.each do |y|
+    gz = "#{y}.gz"
+    Zlib::GzipWriter.open(gz) do |z|
+      z.write File.read(y)
+    end
+    File.delete(y)
   end
 end

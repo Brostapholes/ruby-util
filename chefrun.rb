@@ -1,5 +1,7 @@
 # !/usr/bin/env ruby
 
+require "chef"
+require "chef/application/client"
 require 'fileutils'
 
 # Clear Chef cache
@@ -11,4 +13,4 @@ end
 FileUtils.rm_f('/usr/local/bin/ruby-build', verbose: true)
 
 # Run chef-client
-system('chef-client')
+Chef::Application::Client.new.run
