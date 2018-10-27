@@ -1,7 +1,7 @@
 # !/usr/bin/env ruby
 
-require "chef"
-require "chef/application/client"
+require 'chef'
+require 'chef/application/client'
 require 'fileutils'
 
 # Clear Chef cache
