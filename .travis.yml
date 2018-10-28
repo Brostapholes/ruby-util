@@ -2,7 +2,6 @@
 #safelist
 branches:
   only:
-  - dev
   - master
 
 before_install:
