@@ -18,7 +18,6 @@ dirs.each do |dir|
     Dir.glob('*201*').each { |file| File.delete(file) }
   end
 end
-
 # Array of files in /var/log/sa
 Dir.glob('/var/log/sa/*').each do |x|
   safiles.push(x)
