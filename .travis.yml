@@ -2,7 +2,7 @@
 #safelist
 branches:
   only:
-  - master
+    - master
 
 before_install:
   - sudo apt-get update -qq
